@@ -6,23 +6,129 @@
 
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
+  font-size: $base-font-size;
   font-family: "DM Sans";
   background-color: $cream;
 }
 
+h2,
+h3,
 h4,
 p {
   margin: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 6em 16em;
+}
+
+.my-balance {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.25em;
+  border-radius: 0.75em;
+  color: $very-pale-orange;
+  background-color: $soft-red;
+  h4 {
+    font-size: 0.75em;
+    padding-bottom: 0.5em;
+    color: $lighter-pale-orange;
+    font-weight: $base-font-weight;
+  }
+  img {
+    height: 2em;
+  }
+  p {
+    font-size: 1.25em;
+    font-weight: $bold-font-weight;
+  }
+}
+
+.bar-chart {
+  width: 100%;
+  padding: 1.5em;
+  padding-top: 1em;
+  border-radius: 0.75em;
+  background-color: $very-pale-orange;
+  h3 {
+    color: $dark-brown;
+    font-size: 1.25em;
+  }
+  h4 {
+    font-size: 0.75em;
+    padding-top: 0.5em;
+    color: $medium-brown;
+    font-weight: $base-font-weight;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.5em 0;
+    padding-top: 2em;
+    font-size: 0.75em;
+    li {
+      width: 2.25rem;
+    }
+    div {
+      height: 1rem;
+      background-color: $soft-red;
+      border-radius: 0.15rem;
+    }
+    p {
+      color: $medium-brown;
+      padding-top: 0.25rem;
+      text-align: center;
+    }
+  }
+  hr {
+    color: $light-grey;
+  }
+}
+
+@media (min-width: $mobile-min-width) {
+  @media (max-width: $mobile-max-width) {
+    main {
+      padding: 0 1em;
+    }
+    .bar-chart {
+      padding-left: 1em;
+      padding-right: 1em;
+      ul {
+        font-size: 0.5em;
+        li {
+          width: 2rem;
+        }
+      }
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 .attribution a {
   color: $navy-blue;

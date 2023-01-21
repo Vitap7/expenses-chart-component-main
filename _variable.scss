@@ -4,11 +4,17 @@ $cyan: hsl(186, 34%, 60%);
 $dark-brown: hsl(25, 47%, 15%);
 $medium-brown: hsl(28, 10%, 53%);
 $cream: hsl(27, 66%, 92%);
+$light-grey: hsl(26, 21%, 94%);
 $very-pale-orange: hsl(33, 100%, 98%);
+$lighter-pale-orange: hsl(27, 17%, 90%);
 
 $navy-blue: hsl(228, 45%, 44%);
 
-$body-font-size: 18px;
+$base-font-size: 18px;
 
-$base-font-weights: 400;
-$bold-font-weights: 700;
+$base-font-weight: 400;
+$bold-font-weight: 700;
+
+$mobile-min-width: 375px;
+$mobile-max-width: 480px;
+$desktop-width: 1440px;
