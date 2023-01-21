@@ -1,0 +1,29 @@
+@import "variable";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans";
+  background-color: $cream;
+}
+
+h4,
+p {
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: $navy-blue;
+}
