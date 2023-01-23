@@ -47,7 +47,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/expenses-chart-component-TJ1MqdHTaF)
 - Live Site URL: [expenses-chart-component-main](https://expenses-chart-component-main-xfj8.vercel.app/)
 
 ## My process
