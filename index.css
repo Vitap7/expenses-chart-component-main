@@ -87,18 +87,28 @@ main {
   justify-content: space-between;
   align-items: flex-end;
   padding: 0.5em 0;
-  padding-top: 2em;
+  padding-top: 3.5em;
   font-size: 0.75em;
 }
 .bar-chart ul li {
   width: 2.25rem;
 }
-.bar-chart ul div {
+.bar-chart ul .amount {
+  position: absolute;
+  transform: translate(-18%, -120%);
+  padding: 0.35rem;
+  border-radius: 0.2rem;
+  letter-spacing: 0.05rem;
+  font-weight: 630;
+  color: hsl(33deg, 100%, 98%);
+  background-color: hsl(25deg, 47%, 15%);
+}
+.bar-chart ul .bar {
   height: calc(var(--amount) * 2px);
   background-color: hsl(10deg, 79%, 65%);
   border-radius: 0.15rem;
 }
-.bar-chart ul div:hover {
+.bar-chart ul .bar:hover {
   background-color: hsl(10deg, 79%, 80%);
   cursor: pointer;
 }

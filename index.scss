@@ -88,12 +88,22 @@ main {
     justify-content: space-between;
     align-items: flex-end;
     padding: 0.5em 0;
-    padding-top: 2em;
+    padding-top: 3.5em;
     font-size: 0.75em;
     li {
       width: 2.25rem;
     }
-    div {
+    .amount {
+      position: absolute;
+      transform: translate(-18%, -120%);
+      padding: 0.35rem;
+      border-radius: 0.2rem;
+      letter-spacing: 0.05rem;
+      font-weight: $bold-font-weight * 0.9;
+      color: $very-pale-orange;
+      background-color: $dark-brown;
+    }
+    .bar {
       height: calc(var(--amount) * 2px);
       background-color: $soft-red;
       border-radius: 0.15rem;

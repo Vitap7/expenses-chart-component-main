@@ -1,13 +1,33 @@
 import data from "./data.json" assert { type: "json" };
 
-const myDivs = document.querySelectorAll("li > div");
+const myBars = document.querySelectorAll(".bar");
 
-const date = new Date();
-const todayIndex = (date.getDay() + 6) % 7;
+const todayIndex = (new Date().getDay() + 6) % 7;
 
-myDivs.forEach((div, number) => {
+myBars.forEach((bar, number) => {
   if (number === todayIndex) {
-    div.classList.add("today");
+    bar.classList.add("today");
   }
-  div.setAttribute("style", `--amount: ${data[number].amount}`);
+  bar.dataset.id = number;
+  bar.dataset.amount = data[number].amount;
+  bar.setAttribute("style", `--amount: ${data[number].amount}`);
+});
+
+const showAmount = (e) => {
+  const dataset = e.target.dataset;
+  myBars[dataset.id].insertAdjacentHTML(
+    "beforebegin",
+    `<div class="amount">$${dataset.amount}</div>`
+  );
+};
+
+const hideAmount = (e) => {
+  e.target.previousSibling.remove();
+};
+
+myBars.forEach((myBar) => {
+  myBar.addEventListener("mouseover", showAmount);
+});
+myBars.forEach((myBar) => {
+  myBar.addEventListener("mouseleave", hideAmount);
 });
