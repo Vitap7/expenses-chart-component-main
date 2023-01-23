@@ -37,11 +37,10 @@ main {
   justify-content: center;
   align-items: center;
   gap: 1em;
-  padding: 6em 16em;
 }
 
 .my-balance {
-  width: 100%;
+  width: max(30%, 400px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +64,7 @@ main {
 }
 
 .bar-chart {
-  width: 100%;
+  width: max(30%, 400px);
   padding: 1.5em;
   padding-top: 1em;
   border-radius: 0.75em;
@@ -75,8 +74,11 @@ main {
     font-size: 1.25em;
   }
   h4 {
-    font-size: 0.75em;
     padding-top: 0.5em;
+  }
+  h4,
+  .total p {
+    font-size: 0.75em;
     color: $medium-brown;
     font-weight: $base-font-weight;
   }
@@ -94,6 +96,16 @@ main {
       height: 1rem;
       background-color: $soft-red;
       border-radius: 0.15rem;
+      &:hover {
+        background-color: $light-soft-red;
+        cursor: pointer;
+      }
+    }
+    .today {
+      background-color: $cyan;
+      &:hover {
+        background-color: $light-cyan;
+      }
     }
     p {
       color: $medium-brown;
@@ -104,14 +116,28 @@ main {
   hr {
     color: $light-grey;
   }
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    h3 {
+      font-size: 2.15rem;
+    }
+    .raise-rate {
+      text-align: right;
+      color: $dark-brown;
+      font-weight: $bold-font-weight;
+    }
+  }
 }
 
 @media (min-width: $mobile-min-width) {
   @media (max-width: $mobile-max-width) {
-    main {
-      padding: 0 1em;
+    .my-balance {
+      width: 90%;
     }
     .bar-chart {
+      width: 90%;
       padding-left: 1em;
       padding-right: 1em;
       ul {
@@ -129,6 +155,8 @@ main {
   text-align: center;
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -20%);
 }
 .attribution a {
   color: $navy-blue;
