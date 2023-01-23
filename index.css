@@ -59,6 +59,7 @@ main {
 .my-balance p {
   font-size: 1.25em;
   font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 .bar-chart {
@@ -93,7 +94,7 @@ main {
   width: 2.25rem;
 }
 .bar-chart ul div {
-  height: 1rem;
+  height: calc(var(--amount) * 2px);
   background-color: hsl(10deg, 79%, 65%);
   border-radius: 0.15rem;
 }

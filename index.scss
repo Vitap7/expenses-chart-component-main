@@ -60,6 +60,7 @@ main {
   p {
     font-size: 1.25em;
     font-weight: $bold-font-weight;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -93,7 +94,7 @@ main {
       width: 2.25rem;
     }
     div {
-      height: 1rem;
+      height: calc(var(--amount) * 2px);
       background-color: $soft-red;
       border-radius: 0.15rem;
       &:hover {
